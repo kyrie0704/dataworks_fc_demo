@@ -12,21 +12,21 @@
 
 ### 步骤二：新建函数计算FC
 
-​	登录到函数计算控制台，创建服务及函数。具体操作步骤请参考**小皮数据部数据开发指引**中的**函数计算FC**>**3、开发流程指引**。
+​	登录到[函数计算控制台](https://fcnext.console.aliyun.com/cn-shenzhen/services)，创建服务及函数。具体操作步骤请参考**小皮数据部数据开发指引**中的**函数计算FC**>**3、开发流程指引**。
 
 （1）创建服务
 
 ​	创建服务名称为yunting_demo的函数服务，并开启日志功能。
 
-![创建服务](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.png?Expires=1704252478&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=lGR%2Bc%2FyIwi4TZ1F2saf%2B3fVJ6cw%3D)
+![创建服务](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.png)
 
 （2）创建函数
 
 ​	在yunting_demo服务中创建一个名为yt_ods2dwd的函数，请求处理程序类型选择【处理事件请求】，运行环境选择Python 3.9，代码上传方式选择【使用示例代码】，在高级配置中规格方案请配置为8核16GB，并将执行超时时间设置为36000秒，随后点击底部的【创建】按钮。
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E5%87%BD%E6%95%B0.png?Expires=1704252519&OSSAccessKeyId=TMP.3KfGgyxBfQUw8kasbz2zzQvqVsCXMoXuHCop6bRLuRkfUjsdUG2VjAygFXoC31JKMETMah7vghHYKJuN4UCADh29WBNg6w&Signature=WyvcU96Nbs82KWhnX709e9FJgjk%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E5%87%BD%E6%95%B0.png)
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E5%87%BD%E6%95%B02.png?Expires=1704252530&OSSAccessKeyId=TMP.3KfGgyxBfQUw8kasbz2zzQvqVsCXMoXuHCop6bRLuRkfUjsdUG2VjAygFXoC31JKMETMah7vghHYKJuN4UCADh29WBNg6w&Signature=g17ESR7VpVUy8PNkOH%2FN8QZgOfs%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E5%87%BD%E6%95%B02.png)
 
 ### 步骤三：新建云效流水线
 
@@ -34,21 +34,21 @@
 
 * 流水线源配置
 
-![image-20231218151311408](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%BA%90.png?Expires=1704252017&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=y9DS%2BacboyheeTT%2BdZBeTQjV0hs%3D)
+![image-20231218151311408](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%BA%90.png)
 
 * 函数计算(fc)应用发布配置
 
-![image-20231218151311408](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BFfc.png?Expires=1704251991&OSSAccessKeyId=TMP.3KfGgyxBfQUw8kasbz2zzQvqVsCXMoXuHCop6bRLuRkfUjsdUG2VjAygFXoC31JKMETMah7vghHYKJuN4UCADh29WBNg6w&Signature=bsDi52iBzYffJSU8duhk6E6f0rc%3D)
+![image-20231218151311408](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BFfc.png)
 
 ### 步骤四：新建业务流程
 
 ​	（1）登录到DataWorks控制台，进入到数据开发页面，新建业务流程；新建业务名称为yunting_demo的业务流程，具体操作步骤请参考**小皮数据部数据开发指引**中的**DataWorks**>**4、开发流程指引**。
 
-![image-20231218155718769](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B.png?Expires=1704252824&OSSAccessKeyId=TMP.3KfGgyxBfQUw8kasbz2zzQvqVsCXMoXuHCop6bRLuRkfUjsdUG2VjAygFXoC31JKMETMah7vghHYKJuN4UCADh29WBNg6w&Signature=kOHk6x5gYtUuwnaPdLV0ImU4sKk%3D)
+![image-20231218155718769](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B.png)
 
 ​	（2）创建【begin】/【end】两个虚拟节点作为整个业务流程的开始/结束节点，虚拟节点为不产生任何数据的空跑节点。
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E8%99%9A%E6%8B%9F%E8%8A%82%E7%82%B9.png?Expires=1704263969&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=AbxGSjkjH9hNPr2YZSAggEGR5uw%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E8%99%9A%E6%8B%9F%E8%8A%82%E7%82%B9.png)
 
 ### 步骤五：新建表
 
@@ -152,7 +152,7 @@ TBLPROPERTIES("transactional"="true", 'comment'='云听CEM-电商评论数据主
 
 ```
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E8%A1%A8.png?Expires=1704252840&OSSAccessKeyId=TMP.3KfGgyxBfQUw8kasbz2zzQvqVsCXMoXuHCop6bRLuRkfUjsdUG2VjAygFXoC31JKMETMah7vghHYKJuN4UCADh29WBNg6w&Signature=j0E9JwrhtSUsaMeBIerPWGRXJ2Q%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E8%A1%A8.png)
 
 * 指标表；在dataworks业务流程中，新建一个名为create_dwd_yt_ec_review_aspect_test的ODPS SQL节点，并输入以下内容。
 
@@ -390,29 +390,29 @@ SQLAlchemy==2.0.20
 
 * 创建层
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E5%B1%82.png?Expires=1704261639&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=KJCUcZ3XhmzsQSKIJUttgB3kLSw%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E5%B1%82.png)
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E4%BE%9D%E8%B5%96%E5%8C%85.png?Expires=1704261694&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=cOcx3YTdHWmUzauiTrg6xA5IVZw%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E4%BE%9D%E8%B5%96%E5%8C%85.png)
 
 * 配置层
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E9%85%8D%E7%BD%AE%E5%B1%82.png?Expires=1704261712&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=L4c24B7zMEcAc2rpAwbnFiWjo9g%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E9%85%8D%E7%BD%AE%E5%B1%82.png)
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E9%85%8D%E7%BD%AE%E5%B1%822.png?Expires=1704261725&OSSAccessKeyId=TMP.3KfGgyxBfQUw8kasbz2zzQvqVsCXMoXuHCop6bRLuRkfUjsdUG2VjAygFXoC31JKMETMah7vghHYKJuN4UCADh29WBNg6w&Signature=v1GOiehQ87k5lUHzJv41KJBY8Rs%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E9%85%8D%E7%BD%AE%E5%B1%822.png)
 
 （4）点击运行步骤三中新建的[云效流水线](https://flow.aliyun.com/pipelines/2804475/current)，将git参库中的代码同步至函数fc中。
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E8%BF%90%E8%A1%8C%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BF.png?Expires=1704261621&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=K67MwkkxKgrLdUJiOAJuA3RaPxI%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E8%BF%90%E8%A1%8C%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BF.png)
 
 （5）在DataWorks的yunting_demo业务流程中创建[函数计算节点](https://ide2-cn-shenzhen.data.aliyun.com/?defaultProjectId=15760)，作为触发函数计算运行的节点。
 
 * 新建函数计算节点
 
-![image-20231218151443258](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/dw%E5%88%9B%E5%BB%BAfc%E8%8A%82%E7%82%B9.png?Expires=1704262305&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=Y1yuTrBvZnb0GJeyOz9hGmwhECw%3D)
+![image-20231218151443258](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/dw%E5%88%9B%E5%BB%BAfc%E8%8A%82%E7%82%B9.png)
 
 * 配置函数计算节点所需的变量信息，配置信息内容包括mysql数据库的连接信息和odps的连接信息。由于该变量属于敏感信息，故截屏做打码处理，此配置信息如有需要可向运维人员索取。
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E8%B0%83%E7%94%A8fc%E8%8A%82%E7%82%B9.png?Expires=1704262349&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=IBG0Ht%2BY5OZC%2Fjy5LMrIns0q8IE%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E8%B0%83%E7%94%A8fc%E8%8A%82%E7%82%B9.png)
 
 ### 步骤八：DWD-DWM层处理
 
@@ -539,29 +539,29 @@ WHERE 1=1
 
 （1）将所有节点按执行顺序进行连线，连好线后点击右上角的格式化，如下图。
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%B5%81%E7%A8%8B%E8%BF%9E%E7%BA%BF.png?Expires=1704264753&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=BKq5x%2BgmSMuzq57udzk2DOkrydU%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%B5%81%E7%A8%8B%E8%BF%9E%E7%BA%BF.png)
 
 （2）批量配置业务流程的调度资源组。
 
 * 右键业务流程，选择【批量操作】
 
-![image-20231218162805083](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C1.png?Expires=1704264803&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=zAm1lRuGs0JuSne0m2ySpft6NH0%3D)
+![image-20231218162805083](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C1.png)
 
 * 选中所有的节点，在底部导航栏中点击【更多】-【修改调度资源组】
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C2.png?Expires=1704264811&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=fErei4Sj1bMES5YmmQcc9WzUrIk%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C2.png)
 
 * 选择资源组为"lf_offline_project"，选中"知悉风险并确认操作"，最后点击【确认】
 
-![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C3.png?Expires=1704264824&OSSAccessKeyId=TMP.3KdSQHJskAUEUA89m24UddYo5QPsqRowe5U2TzauqPp56KFt1ABZov9aXs1reuHSiAwPSST5BChjN2ACGEXBrDqHdVfc17&Signature=xT26pqMvVhvfrbXsRskQiV0R%2B4s%3D)
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C3.png)
 
 （2）点击运行测试完整流程。
 
-![image-20231218162938435](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/markdown%E6%96%87%E4%BB%B6%E6%88%AA%E5%B1%8F/typora-user-images/image-20231218162938435.png?Expires=1704176402&OSSAccessKeyId=TMP.3Kh2odteNRqGBJW1hY34hviE2HMEyQmt4N2UiMV9j1FWWset44gLYesixWGRBYA8Tx7b3NYL8W5qpMQ7Gf6QSZwnYVSQxb&Signature=JvzWlstKwx2YkI5siujOqMsFA8M%3D)
+![image-20231218162938435](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/markdown%E6%96%87%E4%BB%B6%E6%88%AA%E5%B1%8F/typora-user-images/image-20231218162938435.png)
 
 （3）点击提交，将节点提交至开发环境。
 
-![image-20231218163117752](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/markdown%E6%96%87%E4%BB%B6%E6%88%AA%E5%B1%8F/typora-user-images/image-20231218163117752.png?Expires=1704176423&OSSAccessKeyId=TMP.3Kh2odteNRqGBJW1hY34hviE2HMEyQmt4N2UiMV9j1FWWset44gLYesixWGRBYA8Tx7b3NYL8W5qpMQ7Gf6QSZwnYVSQxb&Signature=JAbyLQCHgiUE%2BDhCat5xzKQIfSM%3D)
+![image-20231218163117752](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/markdown%E6%96%87%E4%BB%B6%E6%88%AA%E5%B1%8F/typora-user-images/image-20231218163117752.png)
 
 ## 三、常见问题
 
