@@ -17,17 +17,15 @@ import odps
 import pandas as pd
 from sqlalchemy import create_engine
 
-from setting import config
-
 warnings.filterwarnings("ignore")
 
 
 class YtReviewInc:
-    def __init__(self, access_id, secret_access_key, project, endpoint):
+    def __init__(self, access_id, secret_access_key, project, endpoint, yt_data_database_uri):
         # odps对象
         self.odps = odps.ODPS(access_id=access_id, secret_access_key=secret_access_key,
                               project=project, endpoint=endpoint)
-        self.engine = create_engine(url=config.yt_data_database_uri)
+        self.engine = create_engine(url=yt_data_database_uri)
         self.main_table = "dwd_yt_ec_review_main_test"
         self.aspect_table = "dwd_yt_ec_review_aspect_test"
         self.source_table_name = "yt_ec_review_test"
@@ -131,5 +129,6 @@ def handler(event, context):
     secret_access_key_ = evt.get("secret_access_key")
     project_ = evt.get("project")
     endpoint_ = evt.get("endpoint")
-    YtReviewInc(access_id_, secret_access_key_, project_, endpoint_).work()
+    yt_data_database_uri_ = evt.get("yt_data_database_uri")
+    YtReviewInc(access_id_, secret_access_key_, project_, endpoint_, yt_data_database_uri_).work()
     return 'ok'
