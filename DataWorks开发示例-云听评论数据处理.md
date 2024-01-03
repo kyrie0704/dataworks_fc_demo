@@ -32,7 +32,7 @@
 
 ​	登录到[云效平台](https://flow.aliyun.com/my?page=1)，创建流水线名称为"云听评论数据ods-dwd处理demo"流水线。配置流水线源为步骤一中创建的代码仓库的master分支，编辑函数计算应用发布为步骤二中创建的函数fc。
 
-* 新建云效流水线
+* 新建云效流水线；点击“新建流水线”，选择【其他】中的【其他 · 函数计算 (FC) 应用发布】并点击【创建】
 
 ![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%96%B0%E5%BB%BA%E6%B5%81%E6%B0%B4%E7%BA%BF.png)
 
