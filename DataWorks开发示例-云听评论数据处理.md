@@ -12,7 +12,7 @@
 
 ### 步骤二：新建函数计算FC
 
-​	登录到[函数计算控制台](https://fcnext.console.aliyun.com/cn-shenzhen/services)，创建服务及函数。具体操作步骤请参考**小皮数据部数据开发指引**中的**函数计算FC**>**3、开发流程指引**。
+​	登录到[函数计算控制台](https://fcnext.console.aliyun.com/cn-shenzhen/services)，创建服务及函数。
 
 （1）创建服务
 
@@ -30,7 +30,11 @@
 
 ### 步骤三：新建云效流水线
 
-​	登录到云效平台，创建流水线名称为"云听评论数据ods-dwd处理demo"流水线。配置流水线源为步骤一中创建的代码仓库的master分支，编辑函数计算应用发布为步骤二中创建的函数fc。具体操作步骤请参考**小皮数据部数据开发指引**中的**云效流水线**>**2、开发流程指引**。
+​	登录到[云效平台](https://flow.aliyun.com/my?page=1)，创建流水线名称为"云听评论数据ods-dwd处理demo"流水线。配置流水线源为步骤一中创建的代码仓库的master分支，编辑函数计算应用发布为步骤二中创建的函数fc。
+
+* 新建云效流水线
+
+![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%96%B0%E5%BB%BA%E6%B5%81%E6%B0%B4%E7%BA%BF.png)
 
 * 流水线源配置
 
