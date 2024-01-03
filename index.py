@@ -96,6 +96,7 @@ class YtReviewInc:
 
     def delete_data(self, table_name, uniques_id_list):
         """根据uniques_id删除MaxCompute中存在的记录"""
+
         sql = f"DELETE FROM {table_name} WHERE uniques_id in {tuple(uniques_id_list)};"
         result = self.odps.execute_sql(sql)
         if not result:
@@ -108,7 +109,7 @@ class YtReviewInc:
                            "group_id", "oid", "parent", "project_name", "score", "source_name", "sku", "detail",
                            "title", "u_name", "uniques_id", "url", "is_default", "pictures", "videos", "is_plus",
                            "multiple_group", "created_at", "tag_name", "send_date", "create_time", "modify_time"]]
-        result = self.odps.write_table(self.main_table, temp_df.values.tolist())
+        result = self.write_table(self.main_table, temp_df.values.tolist())
         if not result:
             print(f"主表数据入库失败")
             raise result
@@ -117,10 +118,20 @@ class YtReviewInc:
         """保存指标数据到MaxCompute"""
         temp_df = temp_df[["id", "uniques_id", "escore", "aspect1", "aspect2", "send_date", "create_time",
                            "modify_time"]]
-        result = self.odps.write_table(self.aspect_table, temp_df.values.tolist())
+        result = self.write_table(self.aspect_table, temp_df.values.tolist())
         if not result:
             print(f"指标数据入库失败")
             raise result
+
+    def write_table(self, table_name, record_list):
+        """插入数据"""
+        try:
+            self.odps.write_table(table_name, record_list)
+        except Exception as e:
+            print(f"表 {table_name} 插入数据 {record_list} 失败； {e}")
+            return False
+        else:
+            return True
 
 
 def handler(event, context):
