@@ -36,11 +36,11 @@
 
 ![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%96%B0%E5%BB%BA%E6%B5%81%E6%B0%B4%E7%BA%BF.png)
 
-* 流水线源配置
+* 流水线源配置，选择代码源为“Github”，并选择步骤一中新建的代码仓库以及分支并点击【添加】。
 
 ![image-20231218151311408](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%BA%90.png)
 
-* 函数计算(fc)应用发布配置
+* 函数计算(fc)应用发布配置，如下图所示配置；点击【仅保存】。
 
 ![image-20231218151311408](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BFfc.png)
 
