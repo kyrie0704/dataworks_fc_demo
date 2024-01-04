@@ -8,7 +8,7 @@
 
 ### 步骤一：新建Github仓库
 
-​	登录到github，新建一个名为'**[dataworks_fc_demo](https://github.com/kyrie0704/dataworks_fc_demo)**'的代码仓库。
+​	登录到github，新建一个名为'[dataworks_fc_demo](https://github.com/kyrie0704/dataworks_fc_demo)'的代码仓库。
 
 ### 步骤二：新建函数计算FC
 
