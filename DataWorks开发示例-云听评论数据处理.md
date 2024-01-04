@@ -8,7 +8,7 @@
 
 ### 步骤一：新建Github仓库
 
-​	登录到github，新建一个名为"**[dataworks_fc_demo](https://github.com/kyrie0704/dataworks_fc_demo)**"的代码仓库。
+​	登录到github，新建一个名为''**[dataworks_fc_demo](https://github.com/kyrie0704/dataworks_fc_demo)**''的代码仓库。
 
 ### 步骤二：新建函数计算FC
 
@@ -16,13 +16,13 @@
 
 （1）创建服务
 
-​	创建服务名称为yunting_demo的函数服务，并开启日志功能。
+​	创建服务名称为'yunting_demo'的函数服务，并开启日志功能。
 
 ![创建服务](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E6%9C%8D%E5%8A%A1.png)
 
 （2）创建函数
 
-​	在yunting_demo服务中创建一个名为yt_ods2dwd的函数，请求处理程序类型选择【处理事件请求】，运行环境选择Python 3.9，代码上传方式选择【使用示例代码】，在高级配置中规格方案请配置为8核16GB，并将执行超时时间设置为36000秒，随后点击底部的【创建】按钮。
+​	在'yunting_demo'服务中创建一个名为'yt_ods2dwd'的函数，请求处理程序类型选择【处理事件请求】，运行环境选择【Python 3.9】，代码上传方式选择【使用示例代码】，在高级配置中规格方案请配置为8核16GB，并将执行超时时间设置为36000秒，随后点击底部的【创建】按钮。
 
 ![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E5%87%BD%E6%95%B0.png)
 
@@ -30,23 +30,23 @@
 
 ### 步骤三：新建云效流水线
 
-​	登录到[云效平台](https://flow.aliyun.com/my?page=1)，创建流水线名称为"云听评论数据ods-dwd处理demo"流水线。配置流水线源为步骤一中创建的代码仓库的master分支，编辑函数计算应用发布为步骤二中创建的函数fc。
+​	登录到[云效平台](https://flow.aliyun.com/my?page=1)，创建流水线名称为''云听评论数据ods-dwd处理demo'流水线。配置流水线源为步骤一中创建的代码仓库的master分支，编辑函数计算应用发布为步骤二中创建的函数fc。
 
-* 新建云效流水线；点击“新建流水线”，选择【其他】中的【其他 · 函数计算 (FC) 应用发布】并点击【创建】
+* 新建云效流水线；点击【新建流水线】，选择【其他】中的【其他 · 函数计算 (FC) 应用发布】并点击【创建】
 
 ![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%96%B0%E5%BB%BA%E6%B5%81%E6%B0%B4%E7%BA%BF.png)
 
-* 流水线源配置，选择代码源为“Github”，并选择步骤一中新建的代码仓库以及分支并点击【添加】。
+* 流水线源配置，选择代码源为【Github】，并选择步骤一中新建的代码仓库以及分支并点击【添加】。
 
 ![image-20231218151311408](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%BA%90.png)
 
-* 函数计算(fc)应用发布配置，如下图所示配置；点击【仅保存】。
+* 函数计算(fc)应用发布配置，源码类型选择'本地代码'，代码路径填写'.'，如下图所示配置；点击【仅保存】。
 
 ![image-20231218151311408](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BFfc.png)
 
 ### 步骤四：新建业务流程
 
-​	（1）登录到DataWorks控制台，进入到数据开发页面，新建业务流程；新建业务名称为yunting_demo的业务流程，具体操作步骤请参考**小皮数据部数据开发指引**中的**DataWorks**>**4、开发流程指引**。
+​	（1）登录到[DataWorks](https://dataworks.console.aliyun.com/overview)控制台，进入到[数据开发](https://ide2-cn-shenzhen.data.aliyun.com/)页面，新建业务流程；新建业务名称为'yunting_demo'的业务流程。
 
 ![image-20231218155718769](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B.png)
 
@@ -106,7 +106,7 @@ CREATE TABLE `yt_ec_review_test` (
 
 (2)创建dwd层表
 
-* 主表；在dataworks业务流程中，新建一个名为create_dwd_yt_ec_review_main_test的ODPS SQL节点，并输入以下内容。
+* 主表；在dataworks业务流程中，新建一个名为'create_dwd_yt_ec_review_main_test'的ODPS SQL节点，并输入以下内容。
 
 ```sql
 --odps sql 
@@ -158,7 +158,7 @@ TBLPROPERTIES("transactional"="true", 'comment'='云听CEM-电商评论数据主
 
 ![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E8%A1%A8.png)
 
-* 指标表；在dataworks业务流程中，新建一个名为create_dwd_yt_ec_review_aspect_test的ODPS SQL节点，并输入以下内容。
+* 指标表；在dataworks业务流程中，新建一个名为'create_dwd_yt_ec_review_aspect_test'的ODPS SQL节点，并输入以下内容。
 
 ```sql
 --odps sql 
@@ -181,7 +181,7 @@ TBLPROPERTIES("transactional"="true", 'comment'='云听CEM-电商评论数据指
 
 （3）创建dwm层表
 
-* 云听评论统计-店铺品类维度；在dataworks业务流程中，新建一个名为create_dwm_yunting_comment_tm的ODPS SQL节点，并输入以下内容。
+* 云听评论统计-店铺品类维度；在dataworks业务流程中，新建一个名为'create_dwm_yunting_comment_tm'的ODPS SQL节点，并输入以下内容。
 
 ```sql
 --odps sql 
@@ -223,7 +223,7 @@ TBLPROPERTIES("transactional"="true", 'comment'='DWM云听评论统计-店铺品
 
 ### 步骤六：ODS层数据接入
 
-将已提前准备好的1w条测试数据通过[点击链接](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/yt_ec_review_test.sql?Expires=1704249355&OSSAccessKeyId=TMP.3KfGgyxBfQUw8kasbz2zzQvqVsCXMoXuHCop6bRLuRkfUjsdUG2VjAygFXoC31JKMETMah7vghHYKJuN4UCADh29WBNg6w&Signature=QCZKMPZnlehDtWKlmWI2fu118r8%3D)下载后导入到步骤五中新建的ods层的yt_ec_review_test表中。项目演示时可直接使用测试rds的kyrie库中yt_ec_review_test表作为ods层数据。
+将已提前准备好的1w条测试数据通过[点击链接](https://github.com/kyrie0704/dataworks_fc_demo/blob/master/yt_ec_review_test.sql)下载后导入到步骤五中新建的ods层的yt_ec_review_test表中。项目演示时可直接使用测试rds的kyrie库中yt_ec_review_test表作为ods层数据。
 
 ### 步骤七：ODS-DWD层处理
 
@@ -390,11 +390,13 @@ SQLAlchemy==2.0.20
 
 （2）将代码提交至[git仓库](https://github.com/kyrie0704/dataworks_fc_demo)。
 
-（3）[函数fc](https://fcnext.console.aliyun.com/cn-shenzhen/services/yunting_demo/function-detail/yt_ods2dwd/LATEST?tab=config)中配置python脚本运行所需的第三方依赖。
+（3）在[函数fc](https://fcnext.console.aliyun.com/cn-shenzhen/services/yunting_demo/function-detail/yt_ods2dwd/LATEST?tab=config)中配置python脚本运行所需的第三方依赖。
 
 * 创建层
 
 ![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E5%B1%82.png)
+
+将本地requirements.txt中的内容复制到下图中的【requirements.txt文件】对应的输入框中。
 
 ![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E5%88%9B%E5%BB%BA%E4%BE%9D%E8%B5%96%E5%8C%85.png)
 
@@ -404,11 +406,11 @@ SQLAlchemy==2.0.20
 
 ![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E9%85%8D%E7%BD%AE%E5%B1%822.png)
 
-（4）点击运行步骤三中新建的[云效流水线](https://flow.aliyun.com/pipelines/2804475/current)，将git参库中的代码同步至函数fc中。
+（4）点击运行步骤三中新建的[云效流水线](https://flow.aliyun.com/pipelines/2804475/current)，将git仓库中的代码同步至函数fc中。
 
 ![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E8%BF%90%E8%A1%8C%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BF.png)
 
-（5）在DataWorks的yunting_demo业务流程中创建[函数计算节点](https://ide2-cn-shenzhen.data.aliyun.com/?defaultProjectId=15760)，作为触发函数计算运行的节点。
+（5）在DataWorks的'yunting_demo'业务流程中创建[函数计算节点](https://ide2-cn-shenzhen.data.aliyun.com/?defaultProjectId=15760)，作为触发函数计算运行的节点。
 
 * 新建函数计算节点
 
@@ -420,7 +422,7 @@ SQLAlchemy==2.0.20
 
 ### 步骤八：DWD-DWM层处理
 
-​	在DataWorks的yunting_demo业务流程中创建名为incremental_dwm_yunting_comment_tm的ODPS SQL节点，编写如下的处理脚本。
+​	在DataWorks的'yunting_demo'业务流程中创建名为'incremental_dwm_yunting_comment_tm'的ODPS SQL节点，编写如下的处理脚本。
 
 ```sql
 --odps sql 
@@ -541,7 +543,7 @@ WHERE 1=1
 
 ### 步骤九：提交流程节点
 
-（1）将所有节点按执行顺序进行连线，连好线后点击右上角的格式化，如下图。
+（1）将所有节点按执行顺序进行连线，连好线后单击右上角的格式化图标，如下图。
 
 ![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%B5%81%E7%A8%8B%E8%BF%9E%E7%BA%BF.png)
 
@@ -559,11 +561,11 @@ WHERE 1=1
 
 ![](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C3.png)
 
-（2）点击运行测试完整流程。
+（2）点击【运行】测试完整流程。
 
 ![image-20231218162938435](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/markdown%E6%96%87%E4%BB%B6%E6%88%AA%E5%B1%8F/typora-user-images/image-20231218162938435.png)
 
-（3）点击提交，将节点提交至开发环境。
+（3）点击【提交】，将节点提交至开发环境。
 
 ![image-20231218163117752](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/markdown%E6%96%87%E4%BB%B6%E6%88%AA%E5%B1%8F/typora-user-images/image-20231218163117752.png)
 
