@@ -42,13 +42,13 @@
 
 ![image-20231218151311408](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BF%E6%BA%90.png)
 
-* 函数计算(fc)应用发布配置，源码类型选择'本地代码'，代码路径填写'.'，如下图所示配置；点击【仅保存】。
+* 函数计算(fc)应用发布配置，构建集群选择'云效中国香港构建集群'，指定构建节点选择'Linux/amd64'，下载流水线源选择'下载全部流水线源'，源码类型选择'本地代码'，代码路径填写'.'，如下图所示配置；点击右上角【仅保存】。
 
 ![image-20231218151311408](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%BA%91%E6%95%88%E6%B5%81%E6%B0%B4%E7%BA%BFfc.png)
 
 ### 步骤四：新建业务流程
 
-​	（1）登录到[DataWorks](https://dataworks.console.aliyun.com/overview)控制台，进入到[数据开发](https://ide2-cn-shenzhen.data.aliyun.com/)页面，新建业务流程；新建业务名称为'yunting_demo'的业务流程。
+​	（1）登录到[DataWorks](https://dataworks.console.aliyun.com/overview)控制台，进入到[数据开发](https://ide2-cn-shenzhen.data.aliyun.com/)页面，新建业务名称为'yunting_demo'的业务流程。
 
 ![image-20231218155718769](https://lf-development.oss-cn-shenzhen.aliyuncs.com/development_kyrie/dataworks_demo/%E4%B8%9A%E5%8A%A1%E6%B5%81%E7%A8%8B.png)
 
