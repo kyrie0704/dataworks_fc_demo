@@ -392,7 +392,7 @@ SQLAlchemy==2.0.20
 
 （2）将代码提交至[git仓库](https://github.com/kyrie0704/dataworks_fc_demo)。
 
-（3）在[函数fc](https://fcnext.console.aliyun.com/cn-shenzhen/services/yunting_demo/function-detail/yt_ods2dwd/LATEST?tab=config)中配置python脚本运行所需的第三方依赖。
+（3）在[函数fc](https://fcnext.console.aliyun.com/overview)中配置python脚本运行所需的第三方依赖。
 
 * 创建层
 
@@ -588,5 +588,3 @@ WHERE 1=1
 ## 四、附件
 
 [云听项目设计](https://doc.weixin.qq.com/sheet/e3_AYQA4Aa4AIsYQXKoviyTxepwKOri7?scode=ANwALQc9AA0sI0gvvAAYQA4Aa4AIs&tab=qcm715)
-
-​	
